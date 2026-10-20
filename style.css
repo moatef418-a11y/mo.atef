@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --hoverColor:#FEF3E2;
+    --mainColor:#D4621A;
+    --secondColor:#2A1A0E;
+}
+/* nav */
+nav{
+    background-color: var(--hoverColor);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+nav .links ul{
+    display: flex;
+    list-style-type: none;
+}
+nav .links ul li a{
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--secondColor);
+}
+nav .logo{
+    color: var(--secondColor);
+    font-size: 30px;
+} 
+/* Header Section */
+header{
+    background-image: url('/Photos/pexels-anna-nekrashevich-8532616.jpg');
+    height: 900px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+header .layout{
+    width:100% ;
+    height: 100%;
+    background-color: rgba(242, 206, 108, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+header .layout h1{
+    font-size:2.5em ;
+    color:var(--mainColor) ;
+    margin-bottom: 40px;
+    text-align: center;
+}
+header .layout button{
+    padding: 15px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    color: var(--secondColor);
+    transition:all  2s ease;
+    background-color: var(--hoverColor);
+}
+header .layout button:hover{
+    background-color: var(--secondColor);
+    color: var(--mainColor);
+    scale: 1.2;
+}
+@media screen and (max-width:500px){
+
+header .layout{
+    font-size: 20px;
+}
+}
+/* about section */
+.about-section{
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.about-section .image{
+    width: 500px;
+    height: 300px;
+    background-image: url('/Photos/pexels-anna-nekrashevich-8532616.jpg');
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;   
+}
+.content{
+    width: 700px;
+    height: 300px;
+    margin-top: 120px;
+}
+.about-section .content h2{
+    font-size: 30px;
+    color: var(--mainColor);
+}
+@media screen and (max-width:500px){
+    .about-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-section .image{
+        width: 300px;
+        height: 200px;
+        margin-top: 50px;
+    }
+    .content{
+        width: 300px;
+        height: 200px;
+        margin-top: 50px;
+    }
+}
+/* products section */
+.products-parent{
+    font-size: 25px;
+    margin-top: 100px;
+    padding-top: 150px;
+}
+.products-parent h2{
+    font-size:2em;
+    color: var(--secondColor);
+    text-align: center;
+    margin-bottom: 70px;
+}
+.products-parent .products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.products-parent .products div{
+    width: 400px;
+    height: 500px;
+    border-radius: 0 20px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all 2s ease;
+}
+.products-parent .products div:hover{
+    scale: 1.2;
+}
+.products-parent .products div a{
+    text-decoration: none;
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+    margin: 20px;
+    padding: 5px 10px;
+    border-radius: 0 20px;
+    transition: all 2s ease;
+}
+.products-parent .products div a:hover{
+    scale: 1.1;
+    background-color: var(--hoverColor);
+    color: var(--mainColor);
+}
+.products-parent .products .product1{
+    background-image: url('./Photos/pexels-anna-nekrashevich-8532616.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.products-parent .products .product2{
+    background-image: url('./Photos/pexels-anna-nekrashevich-8532638.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.products-parent .products .product3{
+    background-image: url('./Photos/pexels-dayong-tien-681073045-18257675.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.products-parent .products .product4{
+    background-image: url('./Photos/pexels-john-bastian-56677218-8146451.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.products-parent .products .product5{
+    background-image: url('./Photos/pexels-mart-production-9558265.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.products-parent .products .product6{
+    background-image: url('./Photos/pexels-dayong-tien-681073045-18257675.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width:420px){
+    .products-parent .products div{
+    width: 80%;
+}
+.products-parent .products div a{
+    text-align: center;
+}
+}
+/* contact section */
+.contact-us{
+    width: 100%;
+    height: 400px;
+    background-color: var(--hoverColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.contact-us h2{
+    font-size: 1.5em;
+    color: var(--secondColor);
+    margin-bottom: 20px;
+}
+.contact-us h3{
+    font-size: 1em;
+    color: var(--mainColor);
+}
+@media screen and (max-width:420px){
+    .contact-us{
+        font-size: 10px;
+    }
+}
